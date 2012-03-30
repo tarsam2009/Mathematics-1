@@ -30,8 +30,10 @@ parser.add_argument('-v', '--verbose', action='store_true', dest='verbose',
                     default=False, help='display calculation steps')
 args = parser.parse_args()
 
+a = max(args.a, args.b)
+b = min(args.a, args.b)
 iter = 0
-print('a: %d' % args.a)
-print('b: %d' % args.b)
-print('Maximum iterations: %d' % max_iterations(args.b))
-print('Greatest common divisor: %d' % gcd(args.a, args.b))
+print('a: %d' % a)
+print('b: %d' % b)
+print('Maximum iterations: %d' % max_iterations(b))
+print('Greatest common divisor: %d' % gcd(a, b))
